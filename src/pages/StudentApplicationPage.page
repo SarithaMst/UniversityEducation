@@ -1,0 +1,40 @@
+<apex:page controller="StudentApplicationController">
+    <apex:form >
+    <apex:includeLightning />
+    <apex:pageMessages id="msg"/>
+<apex:pageBlock title="Student Application Details">
+<apex:pageBlockSection title="Student Contact Information" columns="2">  
+    <apex:inputText id="firstName" label="FirstName" value="{!fName}"/>
+       <apex:inputText id="lastName" label="LastName" value="{!lName}" required="true"/>
+       <apex:inputText id="email" label="Email" value="{!email}" required="true"/>
+       <apex:inputText id="dob" label="Date Of Birth [mm/dd/yyyy]" value="{!dateOfBirth}" required="true"/>
+ </apex:pageBlockSection>
+ <apex:pageBlockSection title="Student Academic Information" columns="2">
+        <apex:selectList value="{!education}" multiselect="false" size="1" title="Education">
+        <apex:selectOptions value="{!Items}" ></apex:selectOptions>
+        </apex:selectList> 
+        <apex:inputText id="instution" label="Instution Name" value="{!instutionName}"/>
+       <apex:inputText id="score" label="GPA Score" value="{!score}"/>
+       <apex:inputText id="passingYear" label="Year of Passing" value="{!year}"/>
+</apex:pageBlockSection>
+     <apex:pageBlockSection title="Instution Address Information" columns="2">
+       <apex:inputText id="street" label="Street" value="{!street}"/>
+       <apex:inputText id="city" label="City" value="{!city}"/>
+       <apex:inputText id="state" label="State" value="{!state}"/>
+       <apex:inputText id="postalcode" label="Postal Code" value="{!postalCode}"/>
+       <apex:inputText id="country" label="Country" value="{!country}"/>
+ </apex:pageBlockSection>
+    <apex:pageBlockSection title="Instution Address Information" columns="2">
+       <apex:inputText id="empName" label="Employer Name" value="{!employerName}"/>
+       <apex:inputText id="designation" label="Designation" value="{!designation}"/>
+       <apex:inputText id="jstartDate" label="Job StartDate" value="{!startDate}"/>
+       <apex:inputText id="jendDate" label="Job EndDate" value="{!endDate}"/>
+       <apex:inputText id="Description" label="Description" value="{!description}"/>
+ </apex:pageBlockSection>
+    <apex:pageBlockButtons >
+    <apex:commandButton action="{!save}" value="Save"/>
+       <!-- <button class="btn" style="padding:4px;" onclick="window.open('/{!$currentpage.parameters.id}', target='_self');return false;">Cancel</button>-->
+    </apex:pageBlockButtons>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

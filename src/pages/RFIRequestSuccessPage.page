@@ -1,0 +1,13 @@
+<apex:page title="Application" showHeader="false" standardStylesheets="true">   
+  <apex:composition template="{!$Site.Template}">
+    <apex:define name="body">
+        <br/>
+        <center>  <h1>
+            <apex:outputText value="Your information is saved.  Thank you for your interest!"/>
+            </h1>    
+        </center>
+        <br/>
+        <br/>
+    </apex:define>
+  </apex:composition>
+</apex:page>

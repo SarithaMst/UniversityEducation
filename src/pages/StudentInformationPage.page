@@ -1,0 +1,31 @@
+<apex:page controller="StudentInformationController">
+    <apex:form >
+    <apex:includeLightning />
+    <apex:pageMessages id="msg"/>
+<apex:pageBlock title="Student Details">
+<apex:pageBlockSection title="Student Contact Information" columns="2">  
+    <apex:inputText id="firstName" label="FirstName" value="{!fName}"/>
+       <apex:inputText id="lastName" label="LastName" value="{!lName}" required="true"/>
+       <apex:inputText id="email" label="Email" value="{!email}" required="true"/>
+       <apex:inputText id="phone" label="Phone" value="{!phone}"/>
+    <apex:inputText id="dob" label="Date Of Birth [mm/dd/yyyy]" value="{!dateOfBirth}" required="true"/>
+       <!-- <div style="width:70px;">-->
+           Intrested Course<apex:selectList value="{!courseName}" multiselect="false" size="1">
+        <apex:selectOptions value="{!intrestedCourseList}" ></apex:selectOptions>
+        </apex:selectList> 
+        <!--</div>-->
+   </apex:pageBlockSection>
+    <apex:pageBlockSection title="Student Address Information" columns="2">   
+       <apex:inputText id="street" label="Street" value="{!street}"/>
+       <apex:inputText id="city" label="City" value="{!city}"/>
+       <apex:inputText id="state" label="State" value="{!state}"/>
+       <apex:inputText id="postalcode" label="Postal Code" value="{!postalCode}"/>
+       <apex:inputText id="country" label="Country" value="{!country}"/>
+    </apex:pageBlockSection>
+    <apex:pageBlockButtons >
+    <apex:commandButton action="{!save}" value="Save"/>
+        <!--<button class="btn" style="padding:4px;" onclick="window.open('/{!$currentpage.parameters.id}', target='_self');return false;">Cancel</button>-->
+    </apex:pageBlockButtons>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

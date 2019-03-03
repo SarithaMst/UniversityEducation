@@ -1,0 +1,18 @@
+<apex:page standardController="Application__c">
+   
+     <apex:pageBlock mode="view">
+         <apex:pageBlockSection title="Application Details"  columns="2">
+             <apex:detail subject="{!Application__c.Id}" relatedList="false" title="false" inlineEdit="false"/> 
+         <!--<apex:outputText >{!Application__c.Student_Name__c}</apex:outputText>-->
+         <apex:outputText >{!Application__c.Email__c}</apex:outputText>
+         <apex:outputText >{!Application__c.DOB__c}</apex:outputText>
+         <apex:outputText >{!Application__c.Education__c}</apex:outputText>
+         <apex:outputText >{!Application__c.Academic_Instution__c}</apex:outputText>
+         <apex:outputText >{!Application__c.GPA_Score__c}</apex:outputText>
+            </apex:pageBlockSection>
+     </apex:pageBlock>
+    <apex:pageBlock > 
+      <!-- <apex:relatedList subject="{!Application__c}" list="CombinedAttachments" /> -->
+        <apex:relatedList list="CombinedAttachments" id="notes" subject="{!$CurrentPage.parameters.Id}"/>
+</apex:pageBlock>
+</apex:page>

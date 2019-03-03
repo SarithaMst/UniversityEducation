@@ -1,0 +1,22 @@
+<apex:page >
+    <apex:pageBlock >
+    <apex:pageBlockSection columns="1">
+    <apex:image id="theImage" value="{!$Resource.CollegeLogo}" width="800" height="200" alt="Description of image here"/>    
+    </apex:pageBlockSection>
+    <apex:pageBlockSection columns="1">
+        <p><h2>
+            Eskwela is a fully featured premium feel free education template. 
+            This template is quite the opposite to the Aviation School website template. 
+            Eskwela is a modern looking full width design website template.</h2></p>
+			<p><h2>   
+            It has all the trendy elements and design layouts needed for an education website in this era. 
+            You get interactive elements like hover effects, counters, and interactive map at the contact section. 
+            This template is the best match for training institutes, course offering sites and education consultancy sites.</h2></p>
+            <p><h2>               
+            Since as soon as the user, land on the template they first see the services offered in the header section.
+			It is a single page website template, people who want to tell the visitors about their services in a single page will love this template. 
+            This template practices HTML5, CSS3 and it is entirely mobile responsive.
+    		</h2></p>               
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

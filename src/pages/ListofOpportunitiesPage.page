@@ -1,0 +1,13 @@
+<apex:page controller="opportunityController">
+  <apex:form > 
+          <apex:pageBlock id="pb" >
+          <apex:pageBlockTable value="{!opps}" var="v">
+            <apex:column value="{!v.Name}"/>
+            <apex:column value="{!v.Interested_Course__c}"/>
+              <apex:column value="{!v.DOB__c}"/>
+              <apex:column value="{!v.StageName}"/>
+            <apex:column value="{!v.CloseDate}"/>
+          </apex:pageBlockTable>
+      </apex:pageBlock>
+</apex:form> 
+</apex:page>
