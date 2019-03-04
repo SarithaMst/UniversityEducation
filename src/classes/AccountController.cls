@@ -2,6 +2,7 @@ public class AccountController {
     public AccountController(){}
     public void CheckDuplicateAccountName(List<account> accounts)
     {
+        //Testing pull request
         Set<string> newList=new Set<string>();
         List<account> accList=[select Name from Account WHERE CreatedDate = LAST_N_DAYS:15];
     	for(Account A: accList)
