@@ -1,5 +1,6 @@
 public with sharing class StudentApplicationController {
         //Public Contact con{get;set;}
+    //Testing purpose
     public Application__C app {get; set;}
     public string fName{get;set;}
     public string lName{get;set;}
